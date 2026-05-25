@@ -58,9 +58,9 @@ pub const ENABLED_EXTENSIONS: &[&str] = &[
     "KHR_materials_sheen",
     #[cfg(feature = "KHR_animation_pointer")]
     "KHR_animation_pointer",
-    // Allowlisted texture extensions. Processing is delegated to the user.
-    #[cfg(feature = "allow_empty_texture")]
+    #[cfg(feature = "KHR_texture_basisu")]
     "KHR_texture_basisu",
+    // Allowlisted texture extensions. Processing is delegated to the user.
     #[cfg(feature = "EXT_texture_webp")]
     "EXT_texture_webp",
     #[cfg(feature = "allow_empty_texture")]
@@ -79,5 +79,6 @@ pub const SUPPORTED_EXTENSIONS: &[&str] = &[
     "KHR_materials_clearcoat",
     "KHR_materials_sheen",
     "KHR_animation_pointer",
+    "KHR_texture_basisu",
     "EXT_texture_webp",
 ];

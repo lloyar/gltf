@@ -254,6 +254,18 @@ impl Texture {
                 }
             }
         }
+        #[cfg(feature = "KHR_texture_basisu")]
+        {
+            if let Some(texture_basisu) = &self.extensions {
+                if let Some(texture_basisu) = &texture_basisu.texture_basisu {
+                    // Only use the KTX2 source if the source is not empty
+                    // Otherwise, fallback to whatever was there originally
+                    if !source_is_empty(&texture_basisu.source) {
+                        source = texture_basisu.source;
+                    }
+                }
+            }
+        }
         source
     }
 }
