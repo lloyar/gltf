@@ -490,7 +490,7 @@ impl Document {
     /// `KHR_materials_variants` extension.
     #[cfg(feature = "KHR_materials_variants")]
     #[cfg_attr(docsrs, doc(cfg(feature = "KHR_materials_variants")))]
-    pub fn variants(&self) -> Option<iter::Variants> {
+    pub fn variants(&self) -> Option<iter::Variants<'_>> {
         let iter = self
             .0
             .extensions
